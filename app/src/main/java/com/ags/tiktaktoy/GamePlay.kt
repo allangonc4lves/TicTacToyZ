@@ -2202,6 +2202,7 @@ class GamePlay : Activity() {
             p[0]?.setBackgroundColor(  Color.parseColor("#C9051281") )
             p[1]?.setBackgroundColor(  Color.parseColor("#C9051281") )
             p[2]?.setBackgroundColor(  Color.parseColor("#C9051281") )
+
             trocarFundo()
 
         } else if (a[3] == 1 && a[4] == 1 && a[5] == 1) {
@@ -2362,15 +2363,17 @@ class GamePlay : Activity() {
     statusPartida = "Encerrada"
     sairButton.visibility = View.VISIBLE
     continuarButton.visibility = View.VISIBLE
-    p[0]?.isClickable = false
-    p[1]?.isClickable = false
-    p[2]?.isClickable = false
-    p[3]?.isClickable = false
-    p[4]?.isClickable = false
-    p[5]?.isClickable = false
-    p[6]?.isClickable = false
-    p[7]?.isClickable = false
-    p[8]?.isClickable = false
+
+    p[0]?.isEnabled = false
+    p[1]?.isEnabled = false
+    p[2]?.isEnabled = false
+    p[3]?.isEnabled = false
+    p[4]?.isEnabled = false
+    p[5]?.isEnabled = false
+    p[6]?.isEnabled = false
+    p[7]?.isEnabled = false
+    p[8]?.isEnabled = false
+
 
         if( quantidadePartidas.text.toString().equals("2")){
             lPrincipal.setBackgroundResource(R.drawable.back4)
@@ -2465,6 +2468,16 @@ class GamePlay : Activity() {
         vCasas.setText(a[0].toString() + "-" + a[1].toString() + "-" + a[2].toString() + "\n"
                 + "-" + a[3].toString() + "-" + a[4].toString() + "-" + a[5].toString() + "\n"
                 + "-" + a[6].toString() + "-" + a[7].toString() + "-" + a[8].toString())
+
+        p[0]?.isEnabled = true
+        p[1]?.isEnabled = true
+        p[2]?.isEnabled = true
+        p[3]?.isEnabled = true
+        p[4]?.isEnabled = true
+        p[5]?.isEnabled = true
+        p[6]?.isEnabled = true
+        p[7]?.isEnabled = true
+        p[8]?.isEnabled = true
 
         p[0]?.isClickable = true
         p[1]?.isClickable = true
